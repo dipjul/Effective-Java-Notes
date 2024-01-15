@@ -42,7 +42,7 @@ public static Boolean valueOf(boolean b) {
 ##### Important terms:
 1. Flyweight Pattern
 <details>
-<summary>2. Immutable Class</summary>
+<summary><strong><i>2. Immutable Class</i></strong></summary>
 
 ```java
 import java.util.HashMap;
@@ -89,7 +89,7 @@ final class Student {
 </details>
 
 <details>
-<summary>3. Singleton Class</summary>
+<summary><strong><i>3. Singleton Class</i></strong></summary>
 
 ```java
 public class Singleton {
@@ -114,7 +114,7 @@ public class Singleton {
 
 
 <details>
-<summary>4. Non-Instantiable Class</summary>
+<summary><strong><i>4. Non-Instantiable Class</i></strong></summary>
 
 ```java
 public final class NonInstantiable {
@@ -153,7 +153,7 @@ NonInstantiable.displayMessage();
   - Employ static factory methods to create objects without exposing implementation classes, leading to cleaner APIs and better encapsulation.
 
 - <details>
-  <summary><strong>Package Private class for implementation code</strong></summary>
+  <summary><strong><i>Package Private class for implementation code</i></strong></summary>
   <strong>Interface</strong>
   
   ```java
