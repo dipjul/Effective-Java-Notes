@@ -9,22 +9,22 @@ parameters, especially if many of the parameters are optional or of identical ty
 constructors, and builders are much safer than JavaBeans.</i>
 >
 
-
-## Telescoping Constructor Pattern: 
+## Detailed Notes:
+### Telescoping Constructor Pattern: 
 This pattern involves creating multiple constructors with different numbers of parameters. It works but has several disadvantages:
 
 - It’s hard to write client code when there are many parameters.
 - It’s harder to read the client code.
 - Long sequences of identically typed parameters can cause subtle bugs.
 
-## JavaBeans Pattern: 
+### JavaBeans Pattern: 
 This pattern involves calling a parameterless constructor to create the object and then calling setter methods to set each required parameter and each optional parameter of interest. It has its own disadvantages:
 
 - A JavaBean may be in an inconsistent state partway through its construction.
 - The class does not have the option of enforcing consistency merely by checking the validity of the constructor parameters.
 - It precludes the possibility of making a class immutable and requires added effort on the part of the programmer to ensure thread safety.
 
-## Builder Pattern: 
+### Builder Pattern: 
 This pattern combines the safety of the telescoping constructor pattern with the readability of the JavaBeans pattern. The client calls a constructor (or static factory) with all of the required parameters and gets a builder object. Then the client calls setter-like methods on the builder object to set each optional parameter of interest. Finally, the client calls a parameterless build method to generate the object, which is typically immutable. 
 
 This pattern has several advantages:
@@ -32,7 +32,7 @@ This pattern has several advantages:
 - The resulting client code is easy to write and read.
 - It simulates named optional parameters as found in Python and Scala.
 - It allows for early detection of invalid parameters.
-- It ensures invariants against attack by doing checks on object fields after copying parameters from the builder. If a check fails, it throws an IllegalArgumentException.
+- It ensures invariants against attack by doing checks on object fields after copying parameters from the builder. If a check fails, it throws an `IllegalArgumentException`.
 - Use a parallel hierarchy of builders, each nested in the corresponding class. Abstract classes have abstract builders; concrete classes have concrete builders. Use covariant return typing and simulated self-type idiom to enable method chaining and avoid casting.
 - Builders can have multiple varargs parameters, can be reused to build multiple objects, can fill in some fields automatically, and can make client code more readable and safe than constructors or JavaBeans.
 
@@ -40,7 +40,7 @@ It's diisadvantage:
 - Builders require extra objects to be created, which may affect performance.
 - Builders are also more verbose than constructors, so they should be used only when there are enough parameters(typically four or more) to justify them.
 
-### Example
+#### Example
 ```java
 // Abstract Pizza class
 public abstract class Pizza {
