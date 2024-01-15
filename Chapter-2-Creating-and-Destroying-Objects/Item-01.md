@@ -10,16 +10,16 @@ public static Boolean valueOf(boolean b) {
 >
 > ### **Advantages**:
 >
-> 1. **Unlike constructors, they have names.**
-> 2. **Unlike constructors, they are not required to create a new object each time they’re invoked.**
-> 3. **Unlike constructors, they can return an object of any subtype of their return type.**
-> 4. **The class of the returned object can vary from call to call as a function of the input parameters.**
-> 5. **The class of the returned object need not exist when the class containing the method is written.**
+> 1. <i>Unlike constructors, they have names.</i>
+> 2. <i>Unlike constructors, they are not required to create a new object each time they’re invoked.</i>
+> 3. <i>Unlike constructors, they can return an object of any subtype of their return type.</i>
+> 4. <i>The class of the returned object can vary from call to call as a function of the input parameters.</i>
+> 5. <i>The class of the returned object need not exist when the class containing the method is written.</i>
 >
 > ### **Disadvantages**:
 >
-> 1. **The main limitation of providing only static factory methods is that classes without public or protected constructors cannot be subclassed.**
-> 2. **A second shortcoming of static factory methods is that they are hard for programmers to find.**
+> 1. <i>The main limitation of providing only static factory methods is that classes without public or protected constructors cannot be subclassed.</i>
+> 2. <i>A second shortcoming of static factory methods is that they are hard for programmers to find.</i>
 
 
 ## Detailed Notes:
