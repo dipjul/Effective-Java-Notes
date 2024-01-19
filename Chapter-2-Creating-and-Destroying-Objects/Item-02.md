@@ -36,7 +36,7 @@ This pattern has several advantages:
 - Use a parallel hierarchy of builders, each nested in the corresponding class. Abstract classes have abstract builders; concrete classes have concrete builders. Use covariant return typing and simulated self-type idiom to enable method chaining and avoid casting.
 - Builders can have multiple varargs parameters, can be reused to build multiple objects, can fill in some fields automatically, and can make client code more readable and safe than constructors or JavaBeans.
 
-It's diisadvantage:
+It's disadvantage:
 - Builders require extra objects to be created, which may affect performance.
 - Builders are also more verbose than constructors, so they should be used only when there are enough parameters(typically four or more) to justify them.
 
